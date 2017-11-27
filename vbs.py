@@ -111,7 +111,7 @@ vector_dimension = block_width*block_height
 bits_per_codevector = int(sys.argv[2])
 codebook_size = pow(2, bits_per_codevector)
 perturbation_vector = np.full(vector_dimension, 10)
-alpha = float(sys.argv[5])
+mu = float(sys.argv[5])
 
 count = 0
 block_bit_array = bitarray(image_height*image_width/vector_dimension)
@@ -124,7 +124,7 @@ for index_i, i in enumerate(range(0, image_height, block_height)):
     non_edge_array = []
     for index_j, j in enumerate(range(0, image_width, block_width)):
         vec = np.reshape(canny_image[i:i+block_width, j:j+block_height], vector_dimension)
-        is_edge_block = num_pixels(vec, 255, edge_prob, alpha)
+        is_edge_block = num_pixels(vec, 255, edge_prob, mu)
         if is_edge_block:
             if count != 0:
                 united = np.transpose(unite(non_edge_array, count))
