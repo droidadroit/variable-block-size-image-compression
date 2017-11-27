@@ -26,8 +26,10 @@ threshold_2
 `block_width` and `block_height` are set to the size of the blocks the image is divided into. Make sure the blocks cover the the entire image.  
 `mu` is the coefficient used in the block-classifying criteria.  
 `threshold_1` and `threshold_2` are the [parameters](https://docs.opencv.org/3.1.0/dd/d1a/group__imgproc__feature.html#ga04723e007ed888ddf11d9ba04e2232de) used by Canny edge detector.  
-`perturbation_vector` in `lbg_split.py` can be changed manually.  
+`perturbation_vector` can be changed manually.  
 
 Once the parameters are set, enter the following command to run the script.  
 `python [name of the script] [image_location] [bits_per_codevector] [block_width] [block_height] [mu] [threshold_1] [threshold_2]`  
+
+**Please go through the [research paper](https://github.com/droidadroit/variable-block-size-image-compression/blob/master/researchpaper.pdf) for an understanding of the above terms.**
 
