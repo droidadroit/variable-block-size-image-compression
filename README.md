@@ -31,5 +31,5 @@ threshold_2
 Once the parameters are set, enter the following command to run the script.  
 `python [name of the script] [image_location] [bits_per_codevector] [block_width] [block_height] [mu] [threshold_1] [threshold_2]`  
 
-**Please go through the [research paper](https://github.com/droidadroit/variable-block-size-image-compression/blob/master/researchpaper.pdf) for an understanding of the above terms.**
+**Please go through the [research paper](https://ieeexplore.ieee.org/document/8340606/) for an understanding of the above terms.**
 
